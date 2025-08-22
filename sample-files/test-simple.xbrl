@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance">
+  
+  <!-- Contexto simple -->
+  <context id="C1">
+    <entity>
+      <identifier scheme="http://www.sec.gov/CIK">0001234567</identifier>
+    </entity>
+    <period>
+      <instant>2023-12-31</instant>
+    </period>
+  </context>
+
+  <!-- Unidad simple -->
+  <unit id="USD">
+    <measure>iso4217:USD</measure>
+  </unit>
+
+  <!-- Datos financieros simples -->
+  <Assets contextRef="C1" unitRef="USD" decimals="-6">1000000</Assets>
+  <Liabilities contextRef="C1" unitRef="USD" decimals="-6">500000</Liabilities>
+  <Revenue contextRef="C1" unitRef="USD" decimals="-6">750000</Revenue>
+
+</xbrl>

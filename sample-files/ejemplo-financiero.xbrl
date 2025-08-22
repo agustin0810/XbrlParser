@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:link="http://www.xbrl.org/2003/instance"
+       xmlns:xlink="http://www.w3.org/1999/xlink"
+       xmlns:ci="http://www.xbrl.org/2003/instance"
+       xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+       xsi:schemaLocation="http://www.xbrl.org/2003/instance http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd">
+
+  <!-- Contextos -->
+  <context id="D-2023">
+    <entity>
+      <identifier scheme="http://www.sec.gov/CIK">0001234567</identifier>
+    </entity>
+    <period>
+      <startDate>2023-01-01</startDate>
+      <endDate>2023-12-31</endDate>
+    </period>
+  </context>
+
+  <context id="D-2022">
+    <entity>
+      <identifier scheme="http://www.sec.gov/CIK">0001234567</identifier>
+    </entity>
+    <period>
+      <startDate>2022-01-01</startDate>
+      <endDate>2022-12-31</endDate>
+    </period>
+  </context>
+
+  <context id="I-2023">
+    <entity>
+      <identifier scheme="http://www.sec.gov/CIK">0001234567</identifier>
+    </entity>
+    <period>
+      <startDate>2023-01-01</startDate>
+      <endDate>2023-12-31</endDate>
+    </period>
+  </context>
+
+  <!-- Unidades -->
+  <unit id="USD">
+    <measure>iso4217:USD</measure>
+  </unit>
+
+  <unit id="Shares">
+    <measure>shares</measure>
+  </unit>
+
+  <unit id="Pure">
+    <measure>pure</measure>
+  </unit>
+
+  <!-- Datos financieros -->
+  <ci:Assets contextRef="D-2023" unitRef="USD" decimals="-6">1500000</ci:Assets>
+  <ci:Assets contextRef="D-2022" unitRef="USD" decimals="-6">1400000</ci:Assets>
+  
+  <ci:Liabilities contextRef="D-2023" unitRef="USD" decimals="-6">800000</ci:Liabilities>
+  <ci:Liabilities contextRef="D-2022" unitRef="USD" decimals="-6">750000</ci:Liabilities>
+  
+  <ci:Equity contextRef="D-2023" unitRef="USD" decimals="-6">700000</ci:Equity>
+  <ci:Equity contextRef="D-2022" unitRef="USD" decimals="-6">650000</ci:Equity>
+  
+  <ci:Revenue contextRef="I-2023" unitRef="USD" decimals="-6">500000</ci:Revenue>
+  <ci:Revenue contextRef="I-2022" unitRef="USD" decimals="-6">480000</ci:Revenue>
+  
+  <ci:NetIncome contextRef="I-2023" unitRef="USD" decimals="-6">75000</ci:NetIncome>
+  <ci:NetIncome contextRef="I-2022" unitRef="USD" decimals="-6">72000</ci:NetIncome>
+  
+  <ci:BasicEarningsPerShare contextRef="I-2023" unitRef="USD" decimals="2">2.50</ci:BasicEarningsPerShare>
+  <ci:BasicEarningsPerShare contextRef="I-2022" unitRef="USD" decimals="2">2.40</ci:BasicEarningsPerShare>
+  
+  <ci:CommonStockSharesOutstanding contextRef="D-2023" unitRef="Shares" decimals="0">30000</ci:CommonStockSharesOutstanding>
+  <ci:CommonStockSharesOutstanding contextRef="D-2022" unitRef="Shares" decimals="0">30000</ci:CommonStockSharesOutstanding>
+  
+  <ci:DebtToEquityRatio contextRef="D-2023" unitRef="Pure" decimals="2">1.14</ci:DebtToEquityRatio>
+  <ci:DebtToEquityRatio contextRef="D-2022" unitRef="Pure" decimals="2">1.15</ci:DebtToEquityRatio>
+
+</xbrl>

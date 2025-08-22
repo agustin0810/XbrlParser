@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:link="http://www.xbrl.org/2003/instance"
+       xmlns:xlink="http://www.w3.org/1999/xlink"
+       xmlns:us-gaap="http://xbrl.us/us-gaap/2023-01-31"
+       xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+       xmlns:dei="http://xbrl.sec.gov/dei/2023-01-31"
+       xsi:schemaLocation="http://www.xbrl.org/2003/instance http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd">
+
+  <!-- Contextos para diferentes períodos y escenarios -->
+  <context id="FD-2023-12-31">
+    <entity>
+      <identifier scheme="http://www.sec.gov/CIK">0009876543</identifier>
+      <segment>
+        <explicitMember dimension="us-gaap:StatementScenarioAxis">us-gaap:ActualScenarioMember</explicitMember>
+        <explicitMember dimension="us-gaap:StatementGeographicalAxis">us-gaap:UnitedStatesMember</explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <instant>2023-12-31</instant>
+    </period>
+  </context>
+
+  <context id="FD-2022-12-31">
+    <entity>
+      <identifier scheme="http://www.sec.gov/CIK">0009876543</identifier>
+      <segment>
+        <explicitMember dimension="us-gaap:StatementScenarioAxis">us-gaap:ActualScenarioMember</explicitMember>
+        <explicitMember dimension="us-gaap:StatementGeographicalAxis">us-gaap:UnitedStatesMember</explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <instant>2022-12-31</instant>
+    </period>
+  </context>
+
+  <context id="YTD-2023">
+    <entity>
+      <identifier scheme="http://www.sec.gov/CIK">0009876543</identifier>
+      <segment>
+        <explicitMember dimension="us-gaap:StatementScenarioAxis">us-gaap:ActualScenarioMember</explicitMember>
+        <explicitMember dimension="us-gaap:StatementGeographicalAxis">us-gaap:UnitedStatesMember</explicitMember>
+      </segment>
+    </entity>
+    <period>
+      <startDate>2023-01-01</startDate>
+      <endDate>2023-12-31</endDate>
+    </period>
+  </context>
+
+  <!-- Unidades de medida -->
+  <unit id="USD">
+    <measure>iso4217:USD</measure>
+  </unit>
+
+  <unit id="USD-PER-SHARE">
+    <measure>iso4217:USD</measure>
+    <measure>shares</measure>
+  </unit>
+
+  <unit id="PURE">
+    <measure>pure</measure>
+  </unit>
+
+  <unit id="SHARES">
+    <measure>shares</measure>
+  </unit>
+
+  <!-- Información de la empresa -->
+  <dei:EntityRegistrantName contextRef="FD-2023-12-31">RETAIL CHAIN CORP</dei:EntityRegistrantName>
+  <dei:EntityCentralIndexKey contextRef="FD-2023-12-31">0009876543</dei:EntityCentralIndexKey>
+  <dei:DocumentType contextRef="FD-2023-12-31">10-K</dei:DocumentType>
+  <dei:DocumentPeriodEndDate contextRef="FD-2023-12-31">2023-12-31</dei:DocumentPeriodEndDate>
+
+  <!-- Balance General - Activos -->
+  <us-gaap:CashAndCashEquivalentsAtCarryingValue contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">65000000</us-gaap:CashAndCashEquivalentsAtCarryingValue>
+  <us-gaap:CashAndCashEquivalentsAtCarryingValue contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">58000000</us-gaap:CashAndCashEquivalentsAtCarryingValue>
+  
+  <us-gaap:InventoryNet contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">280000000</us-gaap:InventoryNet>
+  <us-gaap:InventoryNet contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">250000000</us-gaap:InventoryNet>
+  
+  <us-gaap:AccountsReceivableNet contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">95000000</us-gaap:AccountsReceivableNet>
+  <us-gaap:AccountsReceivableNet contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">88000000</us-gaap:AccountsReceivableNet>
+  
+  <us-gaap:PropertyPlantAndEquipmentNet contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">580000000</us-gaap:PropertyPlantAndEquipmentNet>
+  <us-gaap:PropertyPlantAndEquipmentNet contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">550000000</us-gaap:PropertyPlantAndEquipmentNet>
+  
+  <us-gaap:Goodwill contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">220000000</us-gaap:Goodwill>
+  <us-gaap:Goodwill contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">220000000</us-gaap:Goodwill>
+  
+  <us-gaap:Assets contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">1230000000</us-gaap:Assets>
+  <us-gaap:Assets contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">1160000000</us-gaap:Assets>
+  
+  <!-- Balance General - Pasivos -->
+  <us-gaap:AccountsPayable contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">180000000</us-gaap:AccountsPayable>
+  <us-gaap:AccountsPayable contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">165000000</us-gaap:AccountsPayable>
+  
+  <us-gaap:AccruedLiabilitiesCurrent contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">85000000</us-gaap:AccruedLiabilitiesCurrent>
+  <us-gaap:AccruedLiabilitiesCurrent contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">78000000</us-gaap:AccruedLiabilitiesCurrent>
+  
+  <us-gaap:LongTermDebtNoncurrent contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">350000000</us-gaap:LongTermDebtNoncurrent>
+  <us-gaap:LongTermDebtNoncurrent contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">380000000</us-gaap:LongTermDebtNoncurrent>
+  
+  <us-gaap:Liabilities contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">715000000</us-gaap:Liabilities>
+  <us-gaap:Liabilities contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">703000000</us-gaap:Liabilities>
+  
+  <!-- Balance General - Patrimonio -->
+  <us-gaap:CommonStockValue contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">15000000</us-gaap:CommonStockValue>
+  <us-gaap:CommonStockValue contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">15000000</us-gaap:CommonStockValue>
+  
+  <us-gaap:RetainedEarningsAccumulatedDeficit contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">400000000</us-gaap:RetainedEarningsAccumulatedDeficit>
+  <us-gaap:RetainedEarningsAccumulatedDeficit contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">352000000</us-gaap:RetainedEarningsAccumulatedDeficit>
+  
+  <us-gaap:StockholdersEquity contextRef="FD-2023-12-31" unitRef="USD" decimals="-6">515000000</us-gaap:StockholdersEquity>
+  <us-gaap:StockholdersEquity contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">457000000</us-gaap:StockholdersEquity>
+  
+  <!-- Estado de Resultados -->
+  <us-gaap:Revenues contextRef="YTD-2023" unitRef="USD" decimals="-6">2800000000</us-gaap:Revenues>
+  <us-gaap:Revenues contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">2600000000</us-gaap:Revenues>
+  
+  <us-gaap:CostOfGoodsAndServicesSold contextRef="YTD-2023" unitRef="USD" decimals="-6">1960000000</us-gaap:CostOfGoodsAndServicesSold>
+  <us-gaap:CostOfGoodsAndServicesSold contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">1820000000</us-gaap:CostOfGoodsAndServicesSold>
+  
+  <us-gaap:GrossProfit contextRef="YTD-2023" unitRef="USD" decimals="-6">840000000</us-gaap:GrossProfit>
+  <us-gaap:GrossProfit contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">780000000</us-gaap:GrossProfit>
+  
+  <us-gaap:OperatingExpenses contextRef="YTD-2023" unitRef="USD" decimals="-6">580000000</us-gaap:OperatingExpenses>
+  <us-gaap:OperatingExpenses contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">540000000</us-gaap:OperatingExpenses>
+  
+  <us-gaap:OperatingIncomeLoss contextRef="YTD-2023" unitRef="USD" decimals="-6">260000000</us-gaap:OperatingIncomeLoss>
+  <us-gaap:OperatingIncomeLoss contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">240000000</us-gaap:OperatingIncomeLoss>
+  
+  <us-gaap:InterestExpense contextRef="YTD-2023" unitRef="USD" decimals="-6">25000000</us-gaap:InterestExpense>
+  <us-gaap:InterestExpense contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">28000000</us-gaap:InterestExpense>
+  
+  <us-gaap:IncomeTaxExpenseBenefit contextRef="YTD-2023" unitRef="USD" decimals="-6">58000000</us-gaap:IncomeTaxExpenseBenefit>
+  <us-gaap:IncomeTaxExpenseBenefit contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">53000000</us-gaap:IncomeTaxExpenseBenefit>
+  
+  <us-gaap:NetIncomeLoss contextRef="YTD-2023" unitRef="USD" decimals="-6">177000000</us-gaap:NetIncomeLoss>
+  <us-gaap:NetIncomeLoss contextRef="FD-2022-12-31" unitRef="USD" decimals="-6">159000000</us-gaap:NetIncomeLoss>
+  
+  <!-- Métricas por acción -->
+  <us-gaap:EarningsPerShareBasic contextRef="YTD-2023" unitRef="USD-PER-SHARE" decimals="2">5.90</us-gaap:EarningsPerShareBasic>
+  <us-gaap:EarningsPerShareBasic contextRef="FD-2022-12-31" unitRef="USD-PER-SHARE" decimals="2">5.30</us-gaap:EarningsPerShareBasic>
+  
+  <us-gaap:WeightedAverageNumberOfSharesOutstandingBasic contextRef="YTD-2023" unitRef="SHARES" decimals="0">30000000</us-gaap:WeightedAverageNumberOfSharesOutstandingBasic>
+  <us-gaap:WeightedAverageNumberOfSharesOutstandingBasic contextRef="FD-2022-12-31" unitRef="SHARES" decimals="0">30000000</us-gaap:WeightedAverageNumberOfSharesOutstandingBasic>
+  
+  <!-- Ratios financieros -->
+  <us-gaap:CurrentRatio contextRef="FD-2023-12-31" unitRef="PURE" decimals="2">1.75</us-gaap:CurrentRatio>
+  <us-gaap:CurrentRatio contextRef="FD-2022-12-31" unitRef="PURE" decimals="2">1.68</us-gaap:CurrentRatio>
+  
+  <us-gaap:DebtToEquityRatio contextRef="FD-2023-12-31" unitRef="PURE" decimals="2">0.68</us-gaap:DebtToEquityRatio>
+  <us-gaap:DebtToEquityRatio contextRef="FD-2022-12-31" unitRef="PURE" decimals="2">0.77</us-gaap:DebtToEquityRatio>
+  
+  <us-gaap:ReturnOnEquity contextRef="YTD-2023" unitRef="PURE" decimals="2">0.34</us-gaap:ReturnOnEquity>
+  <us-gaap:ReturnOnEquity contextRef="FD-2022-12-31" unitRef="PURE" decimals="2">0.35</us-gaap:ReturnOnEquity>
+
+</xbrl>
